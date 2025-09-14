@@ -16,7 +16,7 @@ from langchain_core.output_parsers import StrOutputParser
 
 prompt = ChatPromptTemplate.from_messages(
     [
-        ("system", "You are an AI Assistsnt that gives accurate answers to everything."),
+        ("system", "You are an AI Assistant that gives accurate answers to everything."),
         ("user", "Question:{question}")
 
     ]
@@ -34,5 +34,6 @@ chain = prompt|llm|output_parser
 
 if input_text:
     st.write(chain.invoke({'question':input_text}))
+
 
 
